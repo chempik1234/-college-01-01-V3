@@ -1,0 +1,52 @@
+﻿<Application x:Class="SP2023UserDanisV32.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SP2023UserDanisV32"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush Color="#C6D7FF" x:Key="Secondary"/>
+            <SolidColorBrush Color="#46B29D" x:Key="Accent"/>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Monotype Corsiva"/>
+                <Setter Property="FontSize" Value="24"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontFamily" Value="Monotype Corsiva"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="BorderBrush" Value="{StaticResource Secondary}"/>
+                <Setter Property="Foreground" Value="{StaticResource Accent}"/>
+                <Setter Property="Background" Value="White"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="FontFamily" Value="Monotype Corsiva"/>
+                <Setter Property="Background" Value="{StaticResource Accent}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource Accent}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Padding" Value="15 5"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Property=Background}" 
+                                    BorderBrush="{TemplateBinding Property=BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Padding="{TemplateBinding Padding}"
+                                    CornerRadius="5" 
+                                    Width="{TemplateBinding Width}" 
+                                    MaxWidth="{TemplateBinding MaxWidth}"
+                                    Height="{TemplateBinding Height}"
+                                    MaxHeight="{TemplateBinding MaxHeight}"
+                                    VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}">
+                                <ContentPresenter HorizontalAlignment="Center"
+                                    TextElement.FontSize="{TemplateBinding FontSize}"
+                                    TextElement.FontWeight="{TemplateBinding FontWeight}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
